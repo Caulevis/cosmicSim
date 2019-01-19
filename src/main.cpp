@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "corps.h"
 
 using namespace std;
 
@@ -17,9 +18,20 @@ int main()
                 window.close();
         }
 
-        window.clear(sf::Color::Red);
+        window.clear(sf::Color::Black);
 
 //mon code XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Corps terre, lune;
+
+terre.SetColor(sf::Color(0, 0, 255));
+lune.SetColor(sf::Color(80, 80, 80));
+terre.SetCoords(sf::Vector2f(300, 300));
+
+
+window.draw(terre);
+window.draw(lune);
+
 
 
 
